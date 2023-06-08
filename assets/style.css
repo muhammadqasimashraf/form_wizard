@@ -1,0 +1,340 @@
+body {
+  background-color: #51cec8;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+input,
+textarea,
+select,
+button {
+  color: #fff;
+}
+* {
+  font-family: Poppins, sans-serif;
+}
+.wrapper {
+  margin: auto;
+  display: flex;
+}
+h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 46px;
+  letter-spacing: 3px;
+  margin-top: 19px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.formheader {
+  margin-top: 90px;
+  margin-left: 125px;
+  margin-bottom: 0px;
+}
+.form-control {
+  height: 41px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: 0 0;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0 18px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 29px;
+}
+.step {
+  height: 15px;
+  width: 150px;
+  margin: 0 2px;
+
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+.tab {
+  display: none;
+}
+.step.active {
+  opacity: 1;
+}
+.step.finish {
+  background-color: #3b3ba0;
+}
+
+/* new css */
+#regForm {
+  border: 1px solid #fff;
+  margin: 100px auto;
+  border-radius: 10px;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+
+  margin-top: 50px;
+  margin-left: 200px;
+  border: 1px solid #fff;
+}
+
+h1 {
+  text-align: center;
+}
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+  border: 1px solid red !important;
+}
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #04aa6d;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15Opx;
+  /* margin: 0 2px; */
+
+  border: none;
+  border-radius: 10em;
+  display: inline-block;
+  opacity: 0.5;
+  margin-right: -2%;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #484888;
+}
+#nextBtn {
+  padding: 0;
+  border: none;
+  /* display: inline-flex; */
+  height: 54px;
+  width: 180px;
+  letter-spacing: 1.3px;
+  align-items: center;
+  background: #e4bd37;
+  /* font-family: muli-bold; */
+  cursor: pointer;
+  /* position: relative; */
+  padding-left: 34px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 27px;
+  margin-left: auto;
+}
+.link:hover,
+.link {
+  /* font-family: poppins-regular; */
+  color: #fff;
+  display: inline-block;
+  padding: 5px 22px;
+  border-radius: 5px;
+  background: #e4bd37;
+  text-decoration: none;
+}
+#prevBtn {
+  width: 136px;
+  background: #fff;
+  color: #666;
+  font-family: muli-bold;
+
+  border-radius: 27px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%23fff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+}
+select {
+  color: #fff;
+}
+#female,
+#male,
+#other {
+  accent-color: white;
+}
+input[type="text"]::placeholder {
+  color: white;
+}
+
+input[type="text"]:focus,
+input[type="text"] {
+  background-color: #51cec8;
+  border: 1px solid #fff; /* oranges! yey */
+  color: #fff;
+}
+input[type="email"]:focus,
+input[type="email"] {
+  background-color: #51cec8;
+  border: 1px solid #fff; /* oranges! yey */
+  color: #fff;
+}
+select[type="radio"]:focus,
+select[type="radio"] {
+  background-color: #51cec8;
+  color: #fff;
+}
+#uf:focus,
+#prefersystem:focus,
+#college:focus,
+#term:focus,
+#teacher:focus,
+#instructor:focus,
+#start_date:focus,
+#birthcountry:focus,
+#course_id,
+#mobileNo:focus,
+#mobileNo {
+  background-color: #51cec8;
+  color: #fff;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+img {
+  margin-left: -30px;
+}
+@media screen and (max-width: 768px) {
+  img {
+    display: none;
+  }
+  #regForm {
+    margin: 0;
+    width: 300px;
+  }
+  .formheader {
+    margin: 0;
+
+    width: 300px;
+  }
+  .link {
+    margin-top: 10px;
+  }
+}
+#myProgress {
+  width: 100%;
+  /* background-color: grey; */
+}
+
+#myBar {
+  width: 1%;
+  height: 10px;
+  background-color: green;
+  border-radius: 10em;
+  transition: width 1s;
+
+  background-color: #fff;
+}
+#uf,
+#prefersystem,
+#college,
+#term,
+#dob,
+#start_date,
+#birthcountry {
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .formheader {
+    margin: 0;
+    margin-top: 100px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 25px;
+  }
+  .wrapper {
+    align-items: center;
+    justify-content: center;
+  }
+  input[type="text"] {
+    font-size: 24px;
+  }
+  #regForm {
+    margin-right: 0;
+    width: 100%;
+
+    margin-left: 0;
+  }
+  .formheader {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .imgcontainer {
+    display: none;
+  }
+}
+
+/* checkout css */
+.checkbox-round {
+  width: 1em;
+  height: 1em;
+  background-color: red;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: #51cec8;
+}
+#prevBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .btns {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #nextBtn {
+    margin-top: 1rem;
+  }
+  label {
+    font-size: 16px;
+  }
+  input[type="text"] {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+      integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <title>Document</title>
+    <script src="./assets/index.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row wrapper">
+        <div
+          class="col-lg-4 col-md-12 col-sm-12 imgcontainer col-md-12 col-sm-12"
+        >
+          <img src="./assets/img/form-wizard.webp" alt="" />
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12 formdata">
+          <div class="formheader">
+            <div class="text-center">
+              <a href="#" class="link">#Academic Programs</a>
+            </div>
+
+            <h3 class="text-center text-uppercase mb-4">
+              Register for the course online
+            </h3>
+          </div>
+
+          <form id="regForm" method="post">
+            <div class="formcontent tab">
+              <div class="row">
+                <label for="uf" class="col-lg-3 mr-5 text-white"
+                  >Is this course for UF online</label
+                >
+                <select
+                  name="uf"
+                  id="uf"
+                  class="col-lg-7 form-control text-uppercase"
+                >
+                  <option value="Yes" class="text-white">YES</option>
+                  <option value="no" class="text-uppercase">no</option>
+                </select>
+              </div>
+              <div class="row">
+                <label for="prefersystem" class="col-lg-3 mr-5"
+                  >Preferred System</label
+                >
+                <select
+                  name="prefersystem"
+                  id="prefersystem"
+                  class="col-lg-7 form-control"
+                >
+                  <option value="canvas">CANVAS</option>
+                  <option value="svg">SVG</option>
+                </select>
+              </div>
+              <div class="row">
+                <label for="college" class="col-lg-3 mr-5"
+                  >College/Department</label
+                >
+                <select
+                  name="college"
+                  id="college"
+                  class="col-lg-7 form-control"
+                >
+                  <option value=" university of florida">
+                    UNIVERSITY OF FLORIDA
+                  </option>
+                  <option value=" university of havard">
+                    UNIVERSITY OF HARVARD
+                  </option>
+                  <option value=" university of oxford">
+                    UNIVERSITY OF OXFORD
+                  </option>
+                </select>
+              </div>
+              <div class="row">
+                <label for="term" class="col-lg-3 mr-5">TERM</label>
+                <select name="term" id="term" class="col-lg-7 form-control">
+                  <option
+                    value=""
+                    selected
+                    disabled
+                    hidden
+                    class="text-uppercase"
+                  >
+                    SELECT TERM
+                  </option>
+                  <option value="term1">TERM 1</option>
+                  <option value="term2">TERM 2</option>
+                  <option value="term3">TERM 3</option>
+                </select>
+              </div>
+              <div class="row">
+                <label for="instructor" class="col-lg-3 mr-5"
+                  >Instructor Username</label
+                >
+                <input
+                  type="text"
+                  id="instructor"
+                  class="col-lg-7 form-control"
+                  name="instructor"
+                />
+              </div>
+            </div>
+
+            <div class="formcontent tab">
+              <div class="row">
+                <label for="start_date" class="col-lg-3 mr-5"
+                  >Date Of Birth</label
+                >
+                <!-- <input type="date" id="dob" name="dob" class="col-lg-7 form-control"> -->
+                <input
+                  type="date"
+                  class="form-control col-lg-7"
+                  id="start_date"
+                  name="start_date"
+                  value="{{ old('start_date') }}"
+                  required
+                />
+              </div>
+              <div class="row">
+                <label for="birthcountry" class="col-lg-3 mr-5"
+                  >Country Of Birth</label
+                >
+                <select
+                  name="birthcountry"
+                  id="birthcountry"
+                  class="col-lg-7 text-uppercase form-control"
+                >
+                  <option value="Scotland">Scotland</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="America">America</option>
+                </select>
+              </div>
+              <div class="row">
+                <label for="email" class="col-lg-3 mr-5">Your Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="col-lg-7 form-control"
+                />
+              </div>
+              <div class="row">
+                <label for="mobileNo" class="col-lg-3 mr-5">Mobile No</label>
+                <input
+                  type="tel"
+                  id="mobileNo"
+                  name="mobileNo"
+                  class="col-lg-7 form-control"
+                />
+              </div>
+              <div class="row">
+                <label for="instructor" class="col-lg-3 mr-5">Gender</label>
+
+                <div class="col-lg-7 d-flex">
+                  <div class="male">
+                    <input
+                      type="radio"
+                      id="male"
+                      name="gender"
+                      value="male"
+                      checked
+                    />
+                    <label for="male" class="mr-3">Male</label><br />
+                  </div>
+                  <div class="female">
+                    <input
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="female"
+                    />
+                    <label for="female" class="mr-3">Female</label><br />
+                  </div>
+                  <div class="other">
+                    <input
+                      type="radio"
+                      id="other"
+                      name="gender"
+                      value="other"
+                    />
+                    <label for="other" class="mr-3">Other</label>
+                  </div>
+                </div>
+                <br />
+              </div>
+            </div>
+
+            <div class="formcontent tab">
+              <div class="row">
+                <label for="course-id" class="col-lg-3 mr-5">Course ID</label>
+                <input
+                  type="text"
+                  name="course-id"
+                  id="course-id"
+                  class="col-lg-7 form-control text-uppercase"
+                  placeholder="ex.abc 12345 or abc 12"
+                />
+              </div>
+              <div class="row">
+                <label for="coursetitle" class="col-lg-3 mr-5"
+                  >Course Title</label
+                >
+                <input
+                  type="text"
+                  name="coursetitle"
+                  id="coursetitle"
+                  class="col-lg-7 form-control text-uppercase"
+                  placeholder="ex.intro to physic"
+                />
+              </div>
+              <div class="row">
+                <label for="section" class="col-lg-3 mr-5">Section(s)</label>
+                <input
+                  type="text"
+                  name="section"
+                  id="section"
+                  placeholder="ex.3679 or 33fa 4295"
+                  class="col-lg-7 form-control text-uppercase"
+                />
+              </div>
+              <div class="row">
+                <label for="teacher" class="col-lg-3 mr-5"
+                  >Select Teacher</label
+                >
+                <select
+                  name="teacher"
+                  id="teacher"
+                  class="col-lg-7 form-control text-white text-uppercase"
+                >
+                  <option value="" selected disabled hidden>
+                    FRANCE MAYER
+                  </option>
+                  <option value="France mayer">FRANCE MAYER</option>
+                  <option value="louis jonas">LOUIS JONAS</option>
+                  <option value="merry lin">MERRY LIN</option>
+                </select>
+              </div>
+              <div class="row">
+                <div class="checkbox-circle" style="margin-bottom: 48px">
+                  <label
+                    class="d-flex justify-content-center align-items-center"
+                  >
+                    <input
+                      type="checkbox"
+                      class="checkbox-round mr-2"
+                      checked=""
+                      name="agree"
+                    />I agree all statement in Terms &amp; Conditions
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="btns d-flex justify-content-between">
+                <button
+                  type="button"
+                  id="prevBtn"
+                  onclick="nextPrev(-1)"
+                  class="text-uppercase"
+                >
+                  Back
+                </button>
+                <button
+                  type="button"
+                  id="nextBtn"
+                  onclick="nextPrev(1)"
+                  class="text-uppercase d-flex"
+                >
+                  Continue
+                </button>
+                <i class="fa-regular fa-arrow-right"></i>
+              </div>
+            </div>
+
+            <!-- Circles which indicate the steps of the form: -->
+            <div style="text-align: center; margin-top: 40px">
+              <div id="step1" class="step"></div>
+              <div id="step2" class="step"></div>
+              <div id="step3" class="step"></div>
+              <div id="step4" class="step"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
