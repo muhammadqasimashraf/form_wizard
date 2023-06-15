@@ -19,15 +19,7 @@ button {
   margin: auto;
   display: flex;
 }
-h3 {
-  font-size: 22px;
-  text-transform: uppercase;
-  margin-bottom: 46px;
-  letter-spacing: 3px;
-  margin-top: 19px;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
+
 .formheader {
   margin-top: 90px;
   margin-left: 125px;
@@ -256,6 +248,7 @@ img {
   transition: width 1s;
 
   background-color: #fff;
+  background-color: red;
 }
 #uf,
 #prefersystem,
@@ -337,4 +330,16 @@ img {
   input[type="text"] {
     font-size: 16px;
   }
+}
+h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 46px;
+  letter-spacing: 3px;
+  margin-top: 19px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+label {
+  color: #fff !important;
 }

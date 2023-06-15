@@ -44,7 +44,6 @@
     <link rel="stylesheet" href="./assets/style.css" />
 
     <title>Document</title>
-    <script src="./assets/index.js" defer></script>
   </head>
 
   <body>
@@ -68,7 +67,7 @@
 
           <form id="regForm" method="post">
             <div class="formcontent tab">
-              <div class="row">
+              <div class="row ">
                 <label for="uf" class="col-lg-3 mr-5 text-white"
                   >Is this course for UF online</label
                 >
@@ -318,15 +317,14 @@
             </div>
 
             <!-- Circles which indicate the steps of the form: -->
-            <div style="text-align: center; margin-top: 40px">
-              <div id="step1" class="step"></div>
-              <div id="step2" class="step"></div>
-              <div id="step3" class="step"></div>
-              <div id="step4" class="step"></div>
+            <div>
+              <div id="myBar" class="step"></div>
             </div>
+            <i class="fa-duotone fa-check" id="tick"></i>
           </form>
         </div>
       </div>
     </div>
+    <script src="./assets/index.js" defer></script>
   </body>
 </html>
